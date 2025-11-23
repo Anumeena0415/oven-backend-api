@@ -44,7 +44,7 @@ transporter.verify((error, success) => {
   }
 });
 
-const SENDER_EMAIL = process.env.SMTP_USER || "infooccasionsuper@gmail.com";
+const SENDER_EMAIL = process.env.SMTP_USER || "password@oveventz.com";
 
 // ---------- Controller Functions ----------
 const eventplan = async (req, res) => {
@@ -115,7 +115,7 @@ const sendEmailApproved = async (req, res) => {
         <h2 style="color: #4f46e5;">Hi ${customerName},</h2>
         <p>Your event booking has been <strong>approved</strong>! 🎉</p>
         <p>We're excited to host your event. Our team will contact you soon with details.</p>
-        <p>Thank you,<br><strong>OccasionSuper Team</strong></p>
+        <p>Thank you,<br><strong>oveventz Team</strong></p>
       </div>
     `;
 
@@ -187,7 +187,7 @@ const sendEmailRejected = async (req, res) => {
         <h2 style="color: #b91c1c;">Hi ${customerName},</h2>
         <p>We're sorry to inform you that your booking request has been <strong>rejected</strong>.</p>
         <p>Please reach out to our support team if you'd like to know more.</p>
-        <p>Thank you for your interest,<br><strong>OccasionSuper Team</strong></p>
+        <p>Thank you for your interest,<br><strong>oveventz Team</strong></p>
       </div>
     `;
 

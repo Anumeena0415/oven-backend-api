@@ -22,7 +22,7 @@ const eventplanner = require("./routes/eventplanner");
 
 
 // ✅ Nodemailer sender address (uses SMTP config above)
-const SENDER_EMAIL = process.env.SMTP_USER?.trim() || "infooccasionsuper@gmail.com";
+const SENDER_EMAIL = process.env.SMTP_USER?.trim() || "password@oveventz.com";
 
 // Initialize Express
 const app = express();
@@ -200,7 +200,7 @@ connectDB()
 // ✅ Health Check Route
 app.get("/", (req, res) => {
   res.json({
-    message: "🎉 OccasionSuper backend is running 🚀",
+    message: "🎉 oveventz backend is running 🚀",
     status: "active",
     timestamp: new Date().toISOString(),
   });
@@ -319,7 +319,7 @@ console.log("✅ Using Nodemailer for email service");
           </tr>
         </table>
         <p style="margin-top: 20px;">Please change this temporary password after logging in for security purposes.</p>
-        <p>Thank you,<br><strong>OccasionSuper Team</strong></p>
+        <p>Thank you,<br><strong>oveventz Team</strong></p>
       </div>
     `;
 
@@ -375,7 +375,7 @@ app.post("/api/send-msg", async (req, res) => {
         <p>We regret to inform you that your vendor application was not approved for the following reason:</p>
         <blockquote style="background-color:#f9f9f9; border-left: 4px solid #b91c1c; padding: 10px; margin: 10px 0;">${msg}</blockquote>
         <p>You may reapply after addressing the feedback provided above.</p>
-        <p>Thank you,<br><strong>OccasionSuper Team</strong></p>
+        <p>Thank you,<br><strong>oveventz Team</strong></p>
       </div>
     `;
 
